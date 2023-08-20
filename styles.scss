@@ -21,8 +21,10 @@ body {
     font-family: $font;
     max-width: 100vw;
     min-height: 100vh;
-    background: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
-    background-position: top left, bottom right // border: 3px dotted red;
+    background: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+    background-position: top, bottom;
+    background-repeat: no-repeat, no-repeat;
+    // border: 3px dotted red;
 }
 
 main {
@@ -32,7 +34,7 @@ main {
     justify-content: center;
     width: 375px;
     align-items: center;
-
+    // border: 2px dotted red;
 }
 
 .wrap-1 {
@@ -171,18 +173,101 @@ main {
 }
 
 
+@media (min-width: 769px) {
+    body {
+        background: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+        background-position: top left, bottom right;
+        background-repeat: no-repeat, no-repeat;
+    }
 
-// .banner-2 {
-//     align-self: center;
-// }
+    main {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+    }
 
-// .banner-3 {
-//     align-self: end;
-// }
+    .wrap-1 {
+        text-align: left;
+        width: 30%;
+        height: 20em;
+        ;
+        margin-right: 8%;
+        justify-content: center;
+
+        h1 {
+            padding: .5em 0;
+            // border: 1px dotted red;
+
+            font-size: 3.5em;
+        }
+    }
+
+
+    [class^="banner-"] {
+        flex-direction: row;
+        width: 415px;
+        height: 3.5em;
+    }
+
+    .wrap-2 {
+        width: 35%;
+        height: 40%;
+        align-self: center;
+        margin-top: 5em;
+        margin-left: 5em;
+
+
+
+    }
+
+    .banner-1 {
+        align-self: flex-start;
+    }
+
+    .banner-3 {
+        align-self: flex-end;
+    }
+
+    .wrap-3 {
+        flex-direction: row;
+        width: 100%;
+        height: 20em;
+
+        margin-bottom: 5em;
+    }
+
+    [class^="box-"] {
+        width: 22em;
+        margin: 1em;
+    }
+
+    .box-1 {
+        align-self: flex-start;
+
+        // border: 3px dotted orange;
+    }
+
+    .box-3 {
+        align-self: flex-end;
+    }
+
+    .attribution {
+        position: fixed;
+        bottom: 0;
+        font-size: 11px;
+        text-align: center;
+    }
+}
 
 .attribution {
+    // position: fixed;
+    bottom: 0;
     font-size: 11px;
     text-align: center;
+
+
 }
 
 .attribution a {
