@@ -38,7 +38,7 @@ main {
 }
 .wrap-1 h1 {
   color: hsl(300, 43%, 22%);
-  font-size: 2.5em;
+  font-size: 2.5rem;
   line-height: 0.8;
   padding: 0.5em;
   margin-top: 0.25em;
@@ -166,7 +166,7 @@ main {
   }
   .wrap-1 h1 {
     padding: 0.5em 0;
-    font-size: 3.5em;
+    font-size: 3.5rem;
   }
   [class^=banner-] {
     flex-direction: row;
